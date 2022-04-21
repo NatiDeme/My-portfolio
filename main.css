@@ -36,6 +36,9 @@
 
   .highligh-title {
     color: #36b37e;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    font-size: 40px;
   }
 
   .main-header {
@@ -50,6 +53,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 5%;
+    list-style: none;
   }
 
   .about-me {
@@ -70,9 +74,16 @@
   }
 }
 
+/* mobile version css starts here */
+
 @media (max-width: 480px) {
   nav img {
     height: 25px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #172b4d;
   }
 
   nav h2 {
@@ -100,6 +111,9 @@
 
   .highligh-title {
     color: #36b37e;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    font-size: 40px;
   }
 
   .main-header {
@@ -114,6 +128,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 5%;
+    list-style: none;
   }
 
   .about-me {

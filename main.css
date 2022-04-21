@@ -84,10 +84,9 @@
   nav a {
     text-decoration: none;
     color: #172b4d;
-  }
-
-  nav h2 {
     font-family: "Inter", sans-serif;
+    font-size: large;
+    font-weight: bold;
   }
 
   nav {

@@ -98,7 +98,7 @@
     margin-right: 15px;
   }
 
-  main {
+  /* main {
     margin-top: 10px;
     background-image: url("images/bodybg.png");
     background-repeat: no-repeat;
@@ -106,7 +106,7 @@
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-  }
+  } */
 
   .highligh-title {
     color: #36b37e;
@@ -126,12 +126,12 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 5%;
+    margin-top: 10%;
     list-style: none;
   }
 
   .about-me {
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     font-size: large;
     font-family: "Inter", sans-serif;
@@ -145,5 +145,97 @@
     justify-content: center;
     align-items: center;
     padding-top: 20%;
+    margin-top: 10px;
+    background-image: url("images/bodybg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+  }
+
+  #arrow-icon {
+    margin: 10%;
+    margin-top: 20%;
+  }
+
+  .my-work-title h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: #172b4d;
+    margin-bottom: 5%;
+  }
+
+  .my-work-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 380px 380px 380px 380px 380px 380px;
+    padding: 8%;
+    gap: 1%;
+  }
+
+  .grid-item-1 {
+    border: 2px solid #d0d9d4;
+    background-color: #ebf0ee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .single-card {
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    height: 160px;
+    border-radius: 8px;
+  }
+
+  .single-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a4a42;
+  }
+
+  .skills-list {
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+    list-style: none;
+    margin-left: 5%;
+  }
+
+  .skills-list li {
+    background-color: #ebf0ee;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .see-project-button {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 5%;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .see-project-button :hover {
+    box-shadow: #36b37f;
   }
 }

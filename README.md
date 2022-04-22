@@ -18,9 +18,9 @@ To get a local copy up and running follow these simple example steps.
 2. Open folder in any of the text editors.
 # Author
 
-- GitHub: @NatiDeme
-- Twitter: @NatiDemelash
-- LinkedIn: Natnael Demelash
+- GitHub: @NatiDeme / github.com/NatiDeme
+- Twitter: @NatiDemelash / twitter.com/NatiDemelash
+- LinkedIn: Natnael Demelash / linkedin.com/in/natnael-demelash/
 
 # 🤝 Contributing
 Contributions, issues, and feature requests are welcome!

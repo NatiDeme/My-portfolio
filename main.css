@@ -98,16 +98,6 @@
     margin-right: 15px;
   }
 
-  main {
-    margin-top: 10px;
-    background-image: url("images/bodybg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-  }
-
   .highligh-title {
     color: #36b37e;
     font-family: "Inter", sans-serif;
@@ -126,12 +116,12 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 5%;
+    margin-top: 10%;
     list-style: none;
   }
 
   .about-me {
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     font-size: large;
     font-family: "Inter", sans-serif;
@@ -145,5 +135,213 @@
     justify-content: center;
     align-items: center;
     padding-top: 20%;
+    margin-top: 10px;
+    background-image: url("images/bodybg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+  }
+
+  #arrow-icon {
+    margin: 10%;
+    margin-top: 20%;
+  }
+
+  .my-work-title h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: #172b4d;
+    margin-bottom: 5%;
+  }
+
+  .my-work-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-rows: 380px 380px 380px 380px 380px 380px;
+    padding: 6%;
+    gap: 1%;
+    margin-bottom: 30%;
+  }
+
+  .project-card {
+    border: 2px solid #d0d9d4;
+    background-color: #ebf0ee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .single-card {
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    height: 160px;
+    border-radius: 8px;
+  }
+
+  .single-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a4a42;
+  }
+
+  .skills-list {
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+    list-style: none;
+    justify-content: center;
+  }
+
+  .skills-list li {
+    background-color: #ebf0ee;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .see-project-button {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 5%;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .see-project-button:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-button:active {
+    background-color: #008552;
+  }
+
+  .about-me-head {
+    background-image: url("images/Capture.png");
+    background-size: 400px;
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    font-family: "Inter", sans-serif;
+    height: 350px;
+  }
+
+  .about-me-head h2 {
+    font-size: 30px;
+    color: #172b4d;
+    margin-bottom: 5%;
+  }
+
+  .about-me-head p {
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-grow: 0;
+    color: #42526e;
+    font-size: x-large;
+  }
+
+  .aboutme-button {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 5%;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .aboutme-button:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .aboutme-button:active {
+    background-color: #008552;
+  }
+
+  .category-container {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 2%;
+    padding: 10%;
+    list-style: none;
+  }
+
+  .category-card {
+    border: 2px solid #d0d9d4;
+    background-color: #ebf0ee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 6%;
+  }
+
+  .skills-list-2 {
+    margin-top: 8%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1%;
+  }
+
+  .skills-list-2 li {
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #36b37e;
+    margin: 5px;
+  }
+
+  .single-card-2 h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a4a42;
+    margin-top: 10%;
+  }
+
+  .single-card-2 img {
+    padding-top: 5%;
+  }
+
+  .personal-works {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  .about-me-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

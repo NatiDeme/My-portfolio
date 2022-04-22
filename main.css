@@ -98,16 +98,6 @@
     margin-right: 15px;
   }
 
-  /* main {
-    margin-top: 10px;
-    background-image: url("images/bodybg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-  } */
-
   .highligh-title {
     color: #36b37e;
     font-family: "Inter", sans-serif;
@@ -173,16 +163,15 @@
     text-align: center;
   }
 
-  .grid-container {
+  .projects-container {
     display: grid;
-    grid-template-columns: auto;
     grid-template-rows: 380px 380px 380px 380px 380px 380px;
-    padding: 8%;
+    padding: 6%;
     gap: 1%;
     margin-bottom: 30%;
   }
 
-  .grid-item-1 {
+  .project-card {
     border: 2px solid #d0d9d4;
     background-color: #ebf0ee;
     border-radius: 8px;
@@ -236,8 +225,12 @@
     font-style: normal;
   }
 
-  .see-project-button :hover {
-    box-shadow: #36b37f;
+  .see-project-button:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-button:active {
+    background-color: #008552;
   }
 
   .about-me-head {
@@ -280,26 +273,31 @@
   }
 
   .aboutme-button:hover {
-    box-shadow: #36b37f;
+    box-shadow: 0 4px 8px 0 #36b37f69;
   }
 
-  .grid-container-2 {
+  .aboutme-button:active {
+    background-color: #008552;
+  }
+
+  .category-container {
     margin-top: 5%;
     margin-bottom: 10%;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 350px 350px 350px;
-    padding: 8%;
-    gap: 2%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 2%;
+    padding: 10%;
+    list-style: none;
   }
 
-  .grid-item-2 {
+  .category-card {
     border: 2px solid #d0d9d4;
     background-color: #ebf0ee;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 6%;
   }
 
   .skills-list-2 {
@@ -334,5 +332,16 @@
 
   .single-card-2 img {
     padding-top: 5%;
+  }
+
+  .personal-works {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  .about-me-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

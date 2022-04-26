@@ -379,7 +379,7 @@
   }
   .submit-contact {
     background-color: #36b37f;
-    color: white;
+    color: rgb(230, 159, 159);
     border: none;
     border-radius: 4px;
     padding: 12px;
@@ -392,6 +392,7 @@
   .submit-button-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 5%;
   }
 
   .submit-contact:hover {

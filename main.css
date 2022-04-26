@@ -393,5 +393,12 @@
     display: flex;
     justify-content: center;
   }
-}
+
+  .submit-contact:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .submit-contact:active {
+    background-color: #008552;
+  }
 

@@ -344,24 +344,27 @@
     flex-direction: column;
     align-items: center;
   }
-  .contactme-head {
-    font-family: 'Inter';
+
+  .contactme-head h3 {
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
     text-align: center;
-    color: #172B4D;
+    color: #172b4d;
     margin-bottom: 58px;
+    width: 327px;
+    height: 363;
   }
+
   ul input {
-    background: #FFFFFF;
-    border: 1px solid #D0D9D4;
+    border: 1px solid #d0d9d4;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 15px 16px;
     margin-bottom: 24px;
-    width:100%;
+    width: 100%;
   }
 
   .form-container {
@@ -370,22 +373,28 @@
   }
 
   .form-container textarea {
-    background: #FFFFFF;    
-    border: 1px solid #60C095;
+    border: 1px solid #60c095;
     box-sizing: border-box;
     border-radius: 4px;
     width: 100%;
     padding: 15px;
+    height: 114px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    font-style: normal;
+    color: #091e42;
   }
+
   .submit-contact {
     background-color: #36b37f;
-    color: rgb(230, 159, 159);
+    color: white;
     border: none;
     border-radius: 4px;
     padding: 12px;
     margin-top: 5%;
-    font-family: "Inter",
-    sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
   }
 
@@ -403,3 +412,31 @@
     background-color: #008552;
   }
 
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 5%;
+    margin-top: 46px;
+    margin-bottom: 19px;
+  }
+
+  footer {
+    background-image: url("images/contactbg.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-position-y: 93%;
+  }
+
+  .email-container {
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #42526e;
+    margin-bottom: 20%;
+  }
+}

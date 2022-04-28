@@ -197,19 +197,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-position: center;
-    font-family: "Inter", sans-serif;
-    margin-top: 192px;
     background-image: url("images/abouthead.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    height: 300px;
+    background-size: 80%;
     width: 100%;
   }
 
   .about-me-head h2 {
-    font-size: 30px;
+    margin-top: 192px;
     color: #172b4d;
     font-style: normal;
     font-weight: 700;
@@ -222,7 +218,7 @@
     margin-right: 5%;
     color: #42526e;
     margin-top: 24px;
-    width: 900px;
+    width: 40%;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -305,37 +301,29 @@
     display: grid;
     grid-template-columns: auto auto;
     row-gap: 24px;
+    height: 570px;
+    margin-bottom: 10px;
+    background-image: url("images/footerbg.png");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+    background-position-x: -100px;
   }
 
   footer {
     margin-top: 164px;
-    background-image: url("images/footerbg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  footer ul {
-    list-style: none;
   }
 
   .footer-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 36px;
+    margin-top: 25px;
     list-style: none;
   }
 
   .email-container {
-    display: flex;
-    justify-content: center;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    color: #42526e;
+    display: none;
   }
 
   .form-container {
@@ -365,7 +353,9 @@
 
   .contactme-head {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    padding-top: 5%;
+    padding-right: 24px;
   }
 
   .contactme-head h3 {
@@ -378,10 +368,15 @@
     color: #172b4d;
   }
 
+  .name-fields {
+    display: flex;
+    gap: 14px;
+  }
+
   #user_name {
     height: 48px;
     width: 330px;
-    padding-left: 16px;
+    padding-left: 13px;
     border-radius: 4px;
     border: 1px solid #d0d9d4;
   }
@@ -393,10 +388,25 @@
     line-height: 24px;
   }
 
+  #user_lname {
+    height: 48px;
+    width: 330px;
+    padding-left: 13px;
+    border-radius: 4px;
+    border: 1px solid #d0d9d4;
+  }
+
+  #user_lname::placeholder {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
   #user_email {
     height: 48px;
-    width: 680px;
-    padding-left: 16px;
+    width: 684px;
+    padding-left: 17px;
     border-radius: 4px;
     border: 1px solid #d0d9d4;
     margin-top: 24px;
@@ -422,6 +432,11 @@
     font-style: normal;
     color: #091e42;
     margin-top: 24px;
+  }
+
+  hr {
+    background-color: #dfe1e6;
+    height: 1px;
   }
 }
 
@@ -519,7 +534,7 @@
 
   .projects-container {
     display: grid;
-    grid-template-rows: 380px 380px 380px 380px 380px 380px;
+    grid-template-rows: 474px 474px 474px 474px 474px 474px;
     padding: 6%;
     gap: 1%;
     margin-bottom: 30%;
@@ -538,7 +553,7 @@
     background-color: white;
     text-align: center;
     padding: 16px;
-    height: 160px;
+    height: 222px;
     border-radius: 8px;
   }
 
@@ -556,6 +571,7 @@
     gap: 3%;
     list-style: none;
     justify-content: center;
+    padding-left: 0;
   }
 
   .skills-list li {
@@ -652,6 +668,7 @@
     flex-direction: column;
     text-align: center;
     margin-top: 6%;
+    height: 352px;
   }
 
   .skills-list-2 {
@@ -661,6 +678,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1%;
+    padding-left: 0;
   }
 
   .skills-list-2 li {
@@ -792,5 +810,9 @@
     line-height: 32px;
     color: #42526e;
     margin-bottom: 20%;
+  }
+
+  hr {
+    display: none;
   }
 }

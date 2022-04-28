@@ -19,9 +19,9 @@
       <section class="main-title">
         <div class="top-guide">
           <ul class="main-nav">
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#personal-works">Portfolio</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#contact-me">Contact</a></li>
           </ul>
         </div>
         <div class="landing-text-container">
@@ -176,7 +176,7 @@
           </div>
         </div>
       </section>
-      <section class="about-me-detail">
+      <section class="about-me-detail" id="about-me">
         <div class="about-me-head">
           <h2>About me</h2>
           <p>
@@ -229,7 +229,11 @@
       </section>
     </main>
     <footer>
-      <form action="https://formspree.io/f/xayvlegd" method="post">
+      <form
+        action="https://formspree.io/f/xayvlegd"
+        method="post"
+        id="contact-me"
+      >
         <div class="contactme-head">
           <h3>
             I'm always interested in hearing about new projects, so if you'd
@@ -237,7 +241,7 @@
           </h3>
         </div>
         <ul class="form-container">
-          <li>
+          <li class="name-fields">
             <input
               type="text"
               name="name"
@@ -249,7 +253,7 @@
             <input
               type="text"
               name="name"
-              id="user_name"
+              id="user_lname"
               placeholder="Full name"
               maxlength="30"
               required
@@ -280,7 +284,8 @@
           </li>
         </ul>
       </form>
-      <div>
+      <div class="bottom-line">
+        <hr />
         <ul class="footer-icons">
           <li>
             <a href="https://twitter.com/NatiDemelash"
@@ -307,7 +312,6 @@
               ><img class="icons" src="images/Vectorm.png" alt="github"
             /></a>
           </li>
-        </ul>
         </ul>
         <div class="email-container">
           <span>demelashnatnael@gmail.com</span>

@@ -1,76 +1,446 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: 480px) {
-  nav img {
-    display: none;
-    height: 25px;
-  }
-
-  nav h2 {
+@media (min-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
     font-family: "Inter", sans-serif;
-    font-size: xx-large;
   }
 
   nav {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
-    position: fixed;
+    display: none;
   }
 
-  main {
-    margin-top: 10px;
+  #arrow-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 84px;
+  }
+
+  .main-title {
     background-image: url("images/bodybgbig.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-position-y: 0.5px;
+    background-size: 1500px;
     height: 100vh;
+  }
+
+  .top-guide {
+    padding-top: 2%;
+  }
+
+  .top-guide ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 3%;
+  }
+
+  .main-nav li {
+    color: #172b4d;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .top-guide a {
+    text-decoration: none;
+  }
+
+  .landing-text-container {
+    margin-top: 186px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .landing-text-container p {
+    margin-top: 24px;
+    width: 35%;
+    color: #42526e;
   }
 
   .highligh-title {
     color: #36b37e;
-    font-family: "Inter", sans-serif;
     text-align: center;
-    font-size: 40px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
   }
 
   .main-header {
     color: #172b4d;
-    font-size: 40px;
     text-align: center;
-    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
   }
 
   .main-icons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 5%;
+    gap: 20px;
+    margin-top: 36px;
     list-style: none;
+  }
+
+  .my-work-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  .my-work-title img {
+    display: none;
+  }
+
+  .my-work-title h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    font-style: normal;
+    color: #172b4d;
   }
 
   .about-me {
     margin-top: 5%;
     text-align: center;
     font-size: large;
-    font-family: "Inter", sans-serif;
     margin-left: 3%;
     margin-right: 3%;
   }
 
-  .main-title {
+  .projects-container {
+    display: grid;
+    grid-template-rows: 474px 474px;
+    grid-template-columns: repeat(3, 369px);
+    row-gap: 24px;
+    column-gap: 32px;
+    margin-top: 52px;
+  }
+
+  .project-card {
+    border: 2px solid #d0d9d4;
+    background-color: #ebf0ee;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
+    justify-content: end;
+  }
+
+  .single-card {
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    height: 160px;
+    border-radius: 8px;
+  }
+
+  .single-card h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a4a42;
+  }
+
+  .skills-list {
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+    list-style: none;
     justify-content: center;
+  }
+
+  .skills-list li {
+    background-color: #ebf0ee;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .see-project-button {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 5%;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .see-project-button:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-button:active {
+    background-color: #008552;
+  }
+
+  .personal-works {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: 20%;
+  }
+
+  .about-me-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url("images/abouthead.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 100%;
+  }
+
+  .about-me-head h2 {
+    margin-top: 192px;
+    color: #172b4d;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .about-me-head p {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #42526e;
+    margin-top: 24px;
+    width: 40%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .aboutme-button {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .aboutme-button:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .aboutme-button:active {
+    background-color: #008552;
+  }
+
+  .category-container {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 24px;
+    margin-top: 52px;
+  }
+
+  .category-card {
+    border: 2px solid #d0d9d4;
+    background-color: #ebf0ee;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 6%;
+  }
+
+  .skills-list-2 {
+    margin-top: 8%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1%;
+  }
+
+  .skills-list-2 li {
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #36b37e;
+    margin: 5px;
+  }
+
+  .single-card-2 h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    color: #3a4a42;
+    margin-top: 10%;
+  }
+
+  .single-card-2 {
+    width: 369px;
+    height: 352;
+  }
+
+  footer form {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 24px;
+    height: 570px;
+    margin-bottom: 10px;
+    background-image: url("images/footerbg.png");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+    background-position-x: -100px;
+  }
+
+  footer {
+    margin-top: 164px;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    list-style: none;
+  }
+
+  .email-container {
+    display: none;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .submit-contact {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+
+  .submit-contact:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .submit-contact:active {
+    background-color: #008552;
+  }
+
+  .contactme-head {
+    display: flex;
+    justify-content: end;
+    padding-top: 5%;
+    padding-right: 24px;
+  }
+
+  .contactme-head h3 {
+    width: 463px;
+    height: 256px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 52px;
+    color: #172b4d;
+  }
+
+  .name-fields {
+    display: flex;
+    gap: 14px;
+  }
+
+  #user_name {
+    height: 48px;
+    width: 330px;
+    padding-left: 13px;
+    border-radius: 4px;
+    border: 1px solid #d0d9d4;
+  }
+
+  #user_name::placeholder {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  #user_lname {
+    height: 48px;
+    width: 330px;
+    padding-left: 13px;
+    border-radius: 4px;
+    border: 1px solid #d0d9d4;
+  }
+
+  #user_lname::placeholder {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  #user_email {
+    height: 48px;
+    width: 684px;
+    padding-left: 17px;
+    border-radius: 4px;
+    border: 1px solid #d0d9d4;
+    margin-top: 24px;
+  }
+
+  #user_email::placeholder {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  #user_text {
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    width: 684px;
+    padding-left: 12px;
+    padding-top: 12px;
+    height: 114px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    font-style: normal;
+    color: #091e42;
+    margin-top: 24px;
+  }
+
+  hr {
+    background-color: #dfe1e6;
+    height: 1px;
+  }
+
+  #user_name_mob {
+    display: none;
   }
 }
 
@@ -96,6 +466,10 @@
     justify-content: space-between;
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .top-guide {
+    display: none;
   }
 
   .highligh-title {
@@ -139,7 +513,6 @@
     background-image: url("images/bodybg.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
     height: 100%;
   }
@@ -165,7 +538,7 @@
 
   .projects-container {
     display: grid;
-    grid-template-rows: 380px 380px 380px 380px 380px 380px;
+    grid-template-rows: 474px 474px 474px 474px 474px 474px;
     padding: 6%;
     gap: 1%;
     margin-bottom: 30%;
@@ -184,7 +557,7 @@
     background-color: white;
     text-align: center;
     padding: 16px;
-    height: 160px;
+    height: 222px;
     border-radius: 8px;
   }
 
@@ -202,6 +575,7 @@
     gap: 3%;
     list-style: none;
     justify-content: center;
+    padding-left: 0;
   }
 
   .skills-list li {
@@ -298,6 +672,7 @@
     flex-direction: column;
     text-align: center;
     margin-top: 6%;
+    height: 352px;
   }
 
   .skills-list-2 {
@@ -307,6 +682,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1%;
+    padding-left: 0;
   }
 
   .skills-list-2 li {
@@ -358,6 +734,11 @@
     height: 363;
   }
 
+  .contactme-head {
+    display: flex;
+    justify-content: center;
+  }
+
   ul input {
     border: 1px solid #d0d9d4;
     box-sizing: border-box;
@@ -365,6 +746,11 @@
     padding: 15px 16px;
     margin-bottom: 24px;
     width: 100%;
+  }
+
+  #user_name,
+  #user_lname {
+    visibility: hidden;
   }
 
   .form-container {
@@ -438,5 +824,13 @@
     line-height: 32px;
     color: #42526e;
     margin-bottom: 20%;
+  }
+
+  hr {
+    display: none;
+  }
+
+  #user_lname {
+    display: none;
   }
 }

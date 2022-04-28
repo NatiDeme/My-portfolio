@@ -1,4 +1,4 @@
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   * {
     margin: 0;
     padding: 0;
@@ -438,6 +438,10 @@
     background-color: #dfe1e6;
     height: 1px;
   }
+
+  #user_name_mob {
+    display: none;
+  }
 }
 
 /* mobile version css starts here */
@@ -730,6 +734,11 @@
     height: 363;
   }
 
+  .contactme-head {
+    display: flex;
+    justify-content: center;
+  }
+
   ul input {
     border: 1px solid #d0d9d4;
     box-sizing: border-box;
@@ -737,6 +746,11 @@
     padding: 15px 16px;
     margin-bottom: 24px;
     width: 100%;
+  }
+
+  #user_name,
+  #user_lname {
+    visibility: hidden;
   }
 
   .form-container {
@@ -813,6 +827,10 @@
   }
 
   hr {
+    display: none;
+  }
+
+  #user_lname {
     display: none;
   }
 }

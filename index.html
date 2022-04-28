@@ -244,17 +244,25 @@
           <li class="name-fields">
             <input
               type="text"
-              name="name"
+              name="First-name"
               id="user_name"
-              placeholder="Full name"
+              placeholder="First name"
               maxlength="30"
               required
             />
             <input
               type="text"
-              name="name"
-              id="user_lname"
+              class="only-mobile"
+              name="Full-name"
+              id="user_name_mob"
               placeholder="Full name"
+              maxlength="30"
+            />
+            <input
+              type="text"
+              name="Last-name"
+              id="user_lname"
+              placeholder="Last name"
               maxlength="30"
               required
             />
@@ -280,7 +288,9 @@
             ></textarea>
           </li>
           <li class="submit-button-container">
-            <button class="submit-contact" type="submit">Get in touch</button>
+            <button class="submit-contact" type="submit" onclick="show()">
+              Get in touch
+            </button>
           </li>
         </ul>
       </form>

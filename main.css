@@ -125,6 +125,11 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    transition: 2s;
+  }
+
+  .project-card:hover{
+    transform: scale(1.05);
   }
 
   .single-card {
@@ -442,6 +447,8 @@
   #user_name_mob {
     display: none;
   }
+
+  .category-card
 }
 
 /* mobile version css starts here */
@@ -673,8 +680,13 @@
     text-align: center;
     margin-top: 6%;
     height: 352px;
+    transition: width 5s;
   }
 
+  .category-card:hover {
+    color: red;
+    width: 700px;
+  }
   .skills-list-2 {
     margin-top: 8%;
     display: flex;
@@ -833,4 +845,6 @@
   #user_lname {
     display: none;
   }
+
+  
 }

@@ -125,11 +125,12 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    transition: 2s;
+    transition: 1s;
   }
 
-  .project-card:hover{
+  .project-card:hover {
     transform: scale(1.05);
+    background-color: #008552;
   }
 
   .single-card {
@@ -448,7 +449,7 @@
     display: none;
   }
 
-  .category-card
+  .category-card;
 }
 
 /* mobile version css starts here */
@@ -845,6 +846,4 @@
   #user_lname {
     display: none;
   }
-
-  
 }

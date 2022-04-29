@@ -446,7 +446,7 @@
 
 /* mobile version css starts here */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   nav img {
     height: 25px;
   }

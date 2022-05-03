@@ -452,7 +452,7 @@
 
 /* mobile version css starts here */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav img {
     height: 25px;
   }

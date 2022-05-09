@@ -6,13 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
     <title>Natnael's portfolio Home page</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href="#">Welcome</a>
-        <img src="images/more.png" alt="menu" />
+        <div class="mob-nav-head">
+          <a href="#" id="mnha">Welcome</a>
+          <img src="images/more.png" alt="menu" id="menu" onclick="display()" />
+        </div>
+        <div class="mob-nav-container" id="mnc">
+          <ul class="mob-nav">
+            <li>
+              <a href="#personal-works" onclick="menuClicked()">Portfolio</a>
+            </li>
+            <li>
+              <a href="#about-me" onclick="menuClicked()">About</a>
+            </li>
+            <li>
+              <a href="#contact-me" onclick="menuClicked()">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>

@@ -17,7 +17,7 @@ function display() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function menuClicked() {
   display();
 }
-

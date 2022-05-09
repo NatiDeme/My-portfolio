@@ -4,15 +4,14 @@ function display() {
   if (!isClicked) {
     document.getElementById('mnc').style.display = 'block';
     document.getElementById('mnha').style.visibility = 'hidden';
-    document.getElementById('menu').src = 'images/close.png';
-    document.getElementById('menu').style.height = '1.8rem';
-
+    document.getElementById('menu').style.display = 'none';
+    document.getElementById('menu2').style.display = 'block';
     isClicked = true;
   } else {
     document.getElementById('mnc').style.display = 'none';
     document.getElementById('mnha').style.visibility = 'visible';
-    document.getElementById('menu').src = 'images/more.png';
-
+    document.getElementById('menu').style.display = 'block';
+    document.getElementById('menu2').style.display = 'none';
     isClicked = false;
   }
 }

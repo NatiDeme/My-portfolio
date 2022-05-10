@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    filter: blur(0rem);
   }
 
   nav {
@@ -450,14 +451,18 @@
   }
 
   .card-modal {
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
   }
 
   .modal-container {
     width: 57.5rem;
     height: 67.688rem;
-    background-color: #172b4d;
+    background-color: white;
+    margin: auto;
   }
 
   .mclose-btn {
@@ -488,7 +493,7 @@
   }
 
   .skills-list-modal li {
-    background-color: #ebf0ee;
+    background-color: #ebecf0;
     border-radius: 4px;
     padding: 6px 10px;
     font-family: 'Inter', sans-serif;
@@ -517,13 +522,77 @@
   }
 
   .modal-btns {
-    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    float: right;
+  }
+
+  #gitimg {
+    height: 20px;
+    width: 17px;
+    margin-left: 4px;
+  }
+
+  #liveimg {
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
   }
 
   .modal-text {
     width: 54.5rem;
     padding-left: 24px;
     height: 9.438rem;
+    padding-top: 36px;
+    padding-right: 20px;
+  }
+
+  .modal-text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .see-project-mbutton1 {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .see-project-mbutton1:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-mbutton1:active {
+    background-color: #008552;
+  }
+
+  .see-project-mbutton2 {
+    background-color: #36b37f;
+    margin-left: 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12.8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .see-project-mbutton2:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-mbutton2:active {
+    background-color: #008552;
   }
 }
 

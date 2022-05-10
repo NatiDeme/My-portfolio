@@ -1,4 +1,14 @@
 let isClicked = false;
+const btn = document.getElementById('mybtn');
+let modal = document.getElementById('modal');
+
+function btnClicked() {
+  document.getElementById('modal').style.display = 'block';
+}
+
+function modalClose() {
+  document.getElementById('modal').style.display = 'none';
+}
 
 function display() {
   if (!isClicked) {

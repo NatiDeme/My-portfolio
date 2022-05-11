@@ -1,13 +1,17 @@
 let isClicked = false;
-const btn = document.getElementById('mybtn');
-let modal = document.getElementById('modal');
 
+// eslint-disable-next-line no-unused-vars
 function btnClicked() {
   document.getElementById('modal').style.display = 'block';
+  document.getElementById('personal-works').style.filter = 'blur(1rem)';
+  document.getElementById('about-me').style.filter = 'blur(1rem)';
 }
 
+// eslint-disable-next-line no-unused-vars
 function modalClose() {
   document.getElementById('modal').style.display = 'none';
+  document.getElementById('personal-works').style.filter = 'blur(0rem)';
+  document.getElementById('about-me').style.filter = 'blur(0rem)';
 }
 
 function display() {

@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    filter: blur(0rem);
   }
 
   nav {
@@ -454,15 +453,19 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
     display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.178);
   }
 
   .modal-container {
     width: 57.5rem;
     height: 67.688rem;
     background-color: white;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .mclose-btn {
@@ -522,7 +525,7 @@
   }
 
   .modal-btns {
-    padding-right: 24px;
+    padding-right: 16px;
     padding-top: 24px;
     float: right;
   }
@@ -593,6 +596,10 @@
 
   .see-project-mbutton2:active {
     background-color: #008552;
+  }
+
+  #modal-cover-mob {
+    display: none;
   }
 }
 
@@ -1017,6 +1024,167 @@
 
   #menu2 {
     height: 3rem;
+    display: none;
+  }
+
+  .card-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-container {
+    width: hug(21.438rem);
+    height: hug(52.25rem);
+    background-color: white;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .mclose-btn {
+    display: none;
+  }
+
+  .mclose-btn button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #ebecf0;
+    border: none;
+  }
+
+  .mclose-btn img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .skills-list-modal {
+    margin-top: 2%;
+    display: flex;
+    gap: 3%;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .skills-list-modal li {
+    background-color: #ebecf0;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .modal-image img {
+    width: 350px;
+    height: 220px;
+    padding: 16px;
+  }
+
+  .modal-head {
+    width: 20.813rem;
+    padding-left: 24px;
+    margin-top: 12px;
+  }
+
+  .modal-head h2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+  }
+
+  .modal-btns {
+    padding-top: 16px;
+    order: 1;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  #gitimg {
+    height: 20px;
+    width: 17px;
+    margin-left: 4px;
+  }
+
+  #liveimg {
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+  }
+
+  .modal-text {
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 293px;
+    margin-bottom: 10px;
+  }
+
+  .modal-text p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .see-project-mbutton1 {
+    background-color: #36b37f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 23px;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-left: 15px;
+  }
+
+  .see-project-mbutton1:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-mbutton1:active {
+    background-color: #008552;
+  }
+
+  .see-project-mbutton2 {
+    background-color: #36b37f;
+    margin-left: 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 20px;
+  }
+
+  .see-project-mbutton2:hover {
+    box-shadow: 0 4px 8px 0 #36b37f69;
+  }
+
+  .see-project-mbutton2:active {
+    background-color: #008552;
+  }
+
+  #modal-cover {
     display: none;
   }
 }

@@ -461,11 +461,18 @@
     background-color: rgba(0, 0, 0, 0.178);
   }
 
+  .modal-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .modal-container {
     width: 57.5rem;
     height: 67.688rem;
     background-color: white;
-    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 8px;
   }
 
   .mclose-btn {
@@ -600,6 +607,15 @@
 
   #modal-cover-mob {
     display: none;
+  }
+
+  .disable-scrollbars {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .disable-scrollbars::-webkit-scrollbar {
+    background: transparent;
   }
 }
 

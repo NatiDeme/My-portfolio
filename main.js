@@ -3,8 +3,8 @@ let isClicked = false;
 // eslint-disable-next-line no-unused-vars
 function btnClicked() {
   document.getElementById('modal').style.display = 'block';
-  document.getElementById('personal-works').style.filter = 'blur(1rem)';
-  document.getElementById('about-me').style.filter = 'blur(1rem)';
+  document.getElementById('personal-works').style.filter = 'blur(.8rem)';
+  document.getElementById('about-me').style.filter = 'blur(.8rem)';
 }
 
 // eslint-disable-next-line no-unused-vars

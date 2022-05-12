@@ -5,6 +5,130 @@
     font-family: 'Inter', sans-serif;
   }
 
+  .details-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(182, 177, 177, 0.801);
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  /* Modal styling */
+  .project-image {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px 24px 0 24px;
+  }
+
+  .btn {
+    margin: 10px;
+  }
+
+  .project-title {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    width: 589px;
+    font-weight: bold;
+    line-height: 44px;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 0 24px;
+    color: #172b4d;
+  }
+
+  .details-container-content {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 15px 15px;
+    position: relative;
+    padding-top: 30px;
+  }
+
+  .closeDetails {
+    text-align: end;
+    position: absolute;
+    right: 40px;
+    padding: 4px;
+    border-radius: 3px;
+    top: 20px;
+    background: rgba(235, 236, 240, 1);
+    color: rgba(103, 121, 142, 1);
+  }
+
+  .project-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .list-bg {
+    padding: 6px 10px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #3a4a42;
+    border: none;
+    background: #ebf0ee;
+    border-radius: 4px;
+  }
+
+  .list-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .buttons {
+    margin-right: 12px;
+    position: relative;
+    display: flex;
+  }
+
+  .card-languages {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .description {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #344563;
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  .tech-and-buttons {
+    padding: 24px;
+  }
+
+  .language {
+    padding: 6px 10px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #3a4a42;
+    border: none;
+    background: #ebf0ee;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
   nav {
     display: none;
   }
@@ -532,7 +656,7 @@
   }
 
   .modal-btns {
-    padding-right: 16px;
+    padding-right: 35px;
     padding-top: 24px;
     float: right;
   }
@@ -590,7 +714,7 @@
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 12.8px;
+    padding: 15px;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -605,13 +729,19 @@
     background-color: #008552;
   }
 
+  .btn-modal {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
   #modal-cover-mob {
     display: none;
   }
 
   .disable-scrollbars {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   .disable-scrollbars::-webkit-scrollbar {
@@ -1102,7 +1232,7 @@
   }
 
   .modal-image img {
-    width: 350px;
+    width: 20rem;
     height: 220px;
     padding: 16px;
   }
@@ -1126,6 +1256,7 @@
     padding-top: 16px;
     order: 1;
     display: flex;
+    justify-content: start;
     margin-bottom: 20px;
   }
 
@@ -1158,17 +1289,17 @@
 
   .see-project-mbutton1 {
     background-color: #36b37f;
+    margin-left: 12px;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 19px;
+    border-radius: 8px;
+    padding: 4px;
+    padding-left: 20px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 23px;
-    padding-left: 26px;
-    padding-right: 26px;
-    margin-left: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    width: 137px;
   }
 
   .see-project-mbutton1:hover {
@@ -1184,12 +1315,14 @@
     margin-left: 12px;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 19px;
+    border-radius: 8px;
+    padding: 4px;
+    padding-left: 20px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
+    font-weight: 600;
+    font-size: 15px;
     line-height: 20px;
+    width: 163px;
   }
 
   .see-project-mbutton2:hover {
@@ -1202,5 +1335,11 @@
 
   #modal-cover {
     display: none;
+  }
+
+  .btn-modal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 }

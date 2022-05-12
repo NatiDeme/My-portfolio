@@ -1,6 +1,8 @@
 let isClicked = false;
 const form = document.getElementById('contact-me');
 const emailInput = document.getElementById('user_email');
+const nameInput = document.getElementById('user_name');
+const textInput = document.getElementById('user_text');
 const error = document.getElementById('error');
 
 const projects = [
@@ -222,3 +224,16 @@ form.addEventListener('submit', (event) => {
     error.style.color = 'red';
   }
 });
+
+let formData = { name: nameInput.value, email: emailInput.value, message: textInput.value };
+
+
+if (!localStorage.getItem('name')) {
+  populateStorage();
+} else {
+  setValues();
+}
+
+nameInput.onchange = populateStorage;
+emailInput.onchange = populateStorage;
+textInput.onchange = populateStorage;

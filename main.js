@@ -1,4 +1,8 @@
 let isClicked = false;
+const form = document.getElementById('contact-me');
+const emailInput = document.getElementById('user_email');
+const error = document.getElementById('error');
+
 const projects = [
   {
     id: 0,
@@ -205,4 +209,16 @@ showButton.forEach((button) => {
   button.addEventListener('click', (event) => {
     showDetails(event.target.dataset.id);
   });
+});
+
+form.addEventListener('submit', (event) => {
+  let check = false;
+  if (emailInput.value.toLowerCase() === emailInput.value) {
+    check = true;
+  }
+  if (check === false) {
+    event.preventDefault();
+    error.innerText = 'Please Your Email Must be in Lower Case';
+    error.style.color = 'red';
+  }
 });

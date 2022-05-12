@@ -505,28 +505,13 @@
 
   #user_name {
     height: 48px;
-    width: 330px;
+    width: 684px;
     padding-left: 13px;
     border-radius: 4px;
     border: 1px solid #d0d9d4;
   }
 
   #user_name::placeholder {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  #user_lname {
-    height: 48px;
-    width: 330px;
-    padding-left: 13px;
-    border-radius: 4px;
-    border: 1px solid #d0d9d4;
-  }
-
-  #user_lname::placeholder {
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
@@ -567,10 +552,6 @@
   hr {
     background-color: #dfe1e6;
     height: 1px;
-  }
-
-  #user_name_mob {
-    display: none;
   }
 
   .card-modal {
@@ -746,6 +727,12 @@
 
   .disable-scrollbars::-webkit-scrollbar {
     background: transparent;
+  }
+
+  .error-message {
+    display: flex;
+    justify-content: start;
+    padding-top: 10px;
   }
 }
 
@@ -1059,11 +1046,6 @@
     width: 100%;
   }
 
-  #user_name,
-  #user_lname {
-    visibility: hidden;
-  }
-
   .form-container {
     padding: 0 24px;
     list-style: none;
@@ -1138,10 +1120,6 @@
   }
 
   hr {
-    display: none;
-  }
-
-  #user_lname {
     display: none;
   }
 
@@ -1341,5 +1319,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  .error-message {
+    display: flex;
+    justify-content: center;
   }
 }

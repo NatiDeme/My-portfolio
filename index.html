@@ -155,9 +155,10 @@
     </main>
     <footer>
       <form
-        action="https://formspree.io/f/xayvlegd"
+    
         method="post"
         id="contact-me"
+        action="https://formspree.io/f/xayvlegd"
       >
         <div class="contactme-head">
           <h3>
@@ -169,25 +170,9 @@
           <li class="name-fields">
             <input
               type="text"
-              name="First-name"
+              name="Full name"
               id="user_name"
-              placeholder="First name"
-              maxlength="30"
-              required
-            />
-            <input
-              type="text"
-              class="only-mobile"
-              name="Full-name"
-              id="user_name_mob"
               placeholder="Full name"
-              maxlength="30"
-            />
-            <input
-              type="text"
-              name="Last-name"
-              id="user_lname"
-              placeholder="Last name"
               maxlength="30"
               required
             />
@@ -213,9 +198,12 @@
             ></textarea>
           </li>
           <li class="submit-button-container">
-            <button class="submit-contact" type="submit" onclick="show()">
+            <button class="submit-contact" type="submit" id="submit">
               Get in touch
             </button>
+          </li>
+          <li class="error-message">
+            <small id="error"></small>
           </li>
         </ul>
       </form>

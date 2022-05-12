@@ -4,6 +4,7 @@ This website that holds information about me, my work and all about my tech joun
 # Built With: 
 - HTML
 - CSS
+- JavaScript
 # Live Demo
 - https://natideme.github.io/My-portfolio/
 

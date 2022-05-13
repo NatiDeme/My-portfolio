@@ -213,6 +213,15 @@ showButton.forEach((button) => {
   });
 });
 
+let formData = {};
+function setValues() {
+  let data = null;
+  data = JSON.parse(localStorage.getItem('formData'));
+  nameInput.value = data.name;
+  emailInput.value = data.email;
+  textInput.value = data.message;
+}
+
 form.addEventListener('submit', (event) => {
   let check = false;
   if (emailInput.value.toLowerCase() === emailInput.value) {

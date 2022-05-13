@@ -225,15 +225,18 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-let formData = { name: nameInput.value, email: emailInput.value, message: textInput.value };
 
-
-if (!localStorage.getItem('name')) {
+function populateStorage() {
+  formData = { name: nameInput.value, email: emailInput.value, message: textInput.value };
+  localStorage.setItem('formData', JSON.stringify(formData));
+  setValues();
+}
+if (!localStorage.getItem('formData')) {
   populateStorage();
 } else {
   setValues();
 }
 
-nameInput.onchange = populateStorage;
 emailInput.onchange = populateStorage;
 textInput.onchange = populateStorage;
+nameInput.onchange = populateStorage;

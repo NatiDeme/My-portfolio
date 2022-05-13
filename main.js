@@ -1,6 +1,8 @@
 let isClicked = false;
 const form = document.getElementById('contact-me');
 const emailInput = document.getElementById('user_email');
+const nameInput = document.getElementById('user_name');
+const textInput = document.getElementById('user_text');
 const error = document.getElementById('error');
 
 const projects = [
@@ -222,3 +224,27 @@ form.addEventListener('submit', (event) => {
     error.style.color = 'red';
   }
 });
+
+let formData = {};
+function setValues() {
+  let data = null;
+  data = JSON.parse(localStorage.getItem('formData'));
+  nameInput.value = data.name;
+  emailInput.value = data.email;
+  textInput.value = data.message;
+}
+
+function populateStorage() {
+  formData = { name: nameInput.value, email: emailInput.value, message: textInput.value };
+  localStorage.setItem('formData', JSON.stringify(formData));
+  setValues();
+}
+if (!localStorage.getItem('formData')) {
+  populateStorage();
+} else {
+  setValues();
+}
+
+emailInput.onchange = populateStorage;
+textInput.onchange = populateStorage;
+nameInput.onchange = populateStorage;

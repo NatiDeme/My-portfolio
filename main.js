@@ -8,12 +8,12 @@ const error = document.getElementById('error');
 const projects = [
   {
     id: 0,
-    name: 'Multi-Post Stories Gain+Glory',
+    name: 'Cardano Seminar Capstone Project',
     title: 'Keeping track of hundreds of components',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
+    image: { link: 'images/CSCapstone.JPG', alt: 'cover picture' },
     livesource: '#',
     sourcecode: '#',
   },
@@ -25,8 +25,8 @@ const projects = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
-    livesource: '#',
-    sourcecode: '#',
+    livesource: 'https://natideme.github.io/Cardano-Seminar/',
+    sourcecode: 'https://github.com/NatiDeme/Cardano-Seminar',
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ function showDetails(projectIndex) {
 </div>
 <div class="modal-image">
 <img
-  src="images/Snapshoot-Portfolio.png"
+  src="${projects[projectIndex].image.link}"
   alt="cover picture"
   id="modal-cover"
 />
@@ -132,18 +132,22 @@ function showDetails(projectIndex) {
 />
 </div>
 <div class="modal-btns">
+<a href= 'https://natideme.github.io/Cardano-Seminar/'>
 <button class="see-project-mbutton1" type="button">
 <div class='btn-modal'>
   <p>See Live</p>
   <img src="images/seelive.png" alt="" id="liveimg" />
   </div>
 </button>
+</a>
+<a href='https://github.com/NatiDeme/Cardano-Seminar'>
 <button class="see-project-mbutton2" type="button">
   <div class='btn-modal'>
   <p>See Source</p>
   <img src="images/git.png" alt="" id="gitimg" />
   </div>
 </button>
+</a>
 </div>
 <div class="modal-head">
 <h2>${projects[projectIndex].title}</h2>
@@ -177,6 +181,7 @@ let projectelement = '';
 for (let i = 0; i < projects.length; i += 1) {
   projectelement += `
   <div class="project-card">
+  <img src=''>
   <div class="single-card">
     <h3>
      ${projects[i].name}

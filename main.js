@@ -11,66 +11,66 @@ const projects = [
     name: 'Cardano Seminar Capstone Project',
     title: 'Keeping track of hundreds of components',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/CSCapstone.JPG', alt: 'cover picture' },
-    livesource: '#',
-    sourcecode: '#',
-  },
-  {
-    id: 1,
-    name: 'Multi-Post Stories Gain+Glory',
-    title: 'Keeping track of hundreds of components',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
+      'This website that holds information about Cardano Student Seminar. The project was done as a final showcasing project to finalize a module.',
+    technologies: ['CSS', 'HTML'],
+    image: { link: 'images/CSCapstone.JPG', alt: 'Cardano summit' },
     livesource: 'https://natideme.github.io/Cardano-Seminar/',
     sourcecode: 'https://github.com/NatiDeme/Cardano-Seminar',
   },
   {
-    id: 2,
-    name: 'Multi-Post Stories Gain+Glory',
-    title: 'Keeping track of hundreds of components',
+    id: 1,
+    name: 'Movie Rater',
+    title: 'Movie Rating Website',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
+      'This is a website that allows users to like and post reviews of movies they have previously watched',
+    technologies: ['CSS', 'JavaScript', 'HTML'],
+    image: { link: 'images/movie_rater.png', alt: 'Movie Rater' },
+    livesource: 'https://natideme.github.io/movies-rater/',
+    sourcecode: 'https://github.com/NatiDeme/movies-rater',
+  },
+  {
+    id: 2,
+    name: 'Space Traveler',
+    title: 'Space Traveler',
+    description:
+      "This website is about Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.",
+    technologies: ['CSS', 'JavaScript', 'HTML', 'React', 'Redux'],
+    image: { link: 'images/space_travler.png', alt: 'cover picture' },
     livesource: '#',
-    sourcecode: '#',
+    sourcecode: 'https://github.com/NatiDeme/space-traveler',
   },
   {
     id: 3,
-    name: 'Multi-Post Stories Gain+Glory',
-    title: 'Keeping track of hundreds of components',
+    name: 'Dota 2 Heroes',
+    title: 'Mobile version Web app',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
-    livesource: '#',
-    sourcecode: '#',
+      'This project is a mobile version website that serves as an information hub about heroes in the game Dota 2.',
+    technologies: ['React', 'Redux', 'Tailwindcss', 'JavaScript', 'html'],
+    image: { link: 'images/dota_heroes.png', alt: 'cover picture' },
+    livesource: 'https://62e145834c84cd265ced3323--heroesofdota2.netlify.app/',
+    sourcecode: 'https://github.com/NatiDeme/react-capstone',
   },
   {
     id: 4,
-    name: 'Multi-Post Stories <br/> Gain+Glory',
-    title: 'Keeping track of hundreds of components',
+    name: 'Tour Booking Site',
+    title: 'Backend API for Tour Booking Website',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
-    livesource: '#',
-    sourcecode: '#',
+      'This is an app in which you can reserve a tour, create a tour, delete a tour and show all your reserved tours. This app was created by separating the Fron-End and the Back-End into two repositories.',
+    technologies: ['Ruby on rails', 'Ruby'],
+    image: { link: 'images/tour_booking.png', alt: 'Tour Booking' },
+    livesource: 'https://booking-tour-app.herokuapp.com/api-docs/index.html',
+    sourcecode: 'https://github.com/NatiDeme/tour-booking-backend',
   },
   {
     id: 5,
-    name: 'Multi-Post Stories Gain+Glory',
-    title: 'Keeping track of hundreds of components',
+    name: 'Math-Magicians',
+    title: 'Math Magicians',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releas",
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    image: { link: 'images/Snapshoot-Portfolio.png', alt: 'cover picture' },
+      'This project is a website that allows user to perform calculation and serves as a calculator.',
+    technologies: ['css', 'JavaScript', 'html', 'React'],
+    image: { link: 'images/math.png', alt: 'Math' },
     livesource: '#',
-    sourcecode: '#',
+    sourcecode: 'https://github.com/NatiDeme/Math-Magicians',
   },
 ];
 // eslint-disable-next-line no-unused-vars
@@ -132,7 +132,7 @@ function showDetails(projectIndex) {
 />
 </div>
 <div class="modal-btns">
-<a href= 'https://natideme.github.io/Cardano-Seminar/'>
+<a href= "${projects[projectIndex].livesource}">
 <button class="see-project-mbutton1" type="button">
 <div class='btn-modal'>
   <p>See Live</p>
@@ -199,9 +199,7 @@ for (let i = 0; i < projects.length; i += 1) {
       type="button"
       id="mybtn"
       onclick="btnClicked()"
-      data-id="${
-  projects[i].id
-}"
+      data-id="${projects[i].id}"
     >
       See Project
     </button>
@@ -240,7 +238,11 @@ function setValues() {
 }
 
 function populateStorage() {
-  formData = { name: nameInput.value, email: emailInput.value, message: textInput.value };
+  formData = {
+    name: nameInput.value,
+    email: emailInput.value,
+    message: textInput.value,
+  };
   localStorage.setItem('formData', JSON.stringify(formData));
   setValues();
 }

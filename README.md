@@ -1,5 +1,5 @@
 # My Portfolio
-This website that holds information about me, my work and all about my tech jounry.
+This website that holds information about me, my work and all about my tech journey. The website is continuously under improvement as I will be adding my latest projects to it aiming to showcase my skills and contributions. The website is responsive so you can open it on a mobile or a desktop. 
 
 # Built With: 
 - HTML

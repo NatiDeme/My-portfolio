@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nati | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --border: #dadada;
+        --card: #f5f5f5;
+        --radius: 28px;
+        --container: min(1200px, 90vw);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        width: var(--container);
+        margin: 0 auto;
+        padding-bottom: 5rem;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        z-index: 10;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-weight: 500;
+      }
+
+      .cta {
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        border: 1px solid var(--text);
+        background: var(--text);
+        color: white;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+        padding: 3.5rem 0 4rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.25rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 36ch;
+      }
+
+      .hero img {
+        width: min(380px, 100%);
+        justify-self: center;
+      }
+
+      section + section {
+        margin-top: 4rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 1.5rem;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .pill {
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        padding: 0.6rem 1.4rem;
+        font-size: 0.92rem;
+        font-weight: 600;
+        background: white;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        min-height: 260px;
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        color: var(--muted);
+        flex: 1;
+      }
+
+      .tag-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        background: white;
+        border-radius: 999px;
+        padding: 0.4rem 1rem;
+        border: 1px solid var(--border);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .design-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.2rem;
+      }
+
+      .placeholder {
+        background: var(--card);
+        border-radius: 26px;
+        height: 160px;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .skill-card h4 {
+        margin-bottom: 0.75rem;
+        font-size: 1.05rem;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .contact-card {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1.25rem;
+      }
+
+      .contact-card strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-card span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 700px) {
+        .nav-links {
+          display: none;
+        }
+
+        .cta {
+          padding-inline: 1rem;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .hero p {
+          margin: 0 auto;
+        }
+
+        .split {
+          text-align: center;
+        }
+
+        .skill-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="page nav">
+        <div class="logo">N</div>
+        <ul class="nav-links">
+          <li><a href="#projects">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#designs">Design</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <button class="cta">
+          <span>▶</span>
+          Play video
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p>Hey there, I'm Nati</p>
+          <h1>I'm a software developer</h1>
+          <p>
+            I can help you build a product, feature, or website. Look through some of my work and
+            experience. If you like what you see and have a project you need coded, don’t hesitate to
+            contact me.
+          </p>
+        </div>
+        <img src="https://i.imgur.com/duVtXnG.png" alt="3D character illustration" />
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">My recent projects</h2>
+        <div class="pill-row">
+          <span class="pill">UI/UX</span>
+          <span class="pill">Frontend</span>
+          <span class="pill">Full-stack</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Name</h3>
+            <p>
+              This website holds information about Candora Student Seminar. The project was done as a
+              final showcasing project to finalize a module.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Frontend</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Name</h3>
+            <p>
+              This website holds information about Candora Student Seminar. The project was done as a
+              final showcasing project to finalize a module.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Frontend</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Name</h3>
+            <p>
+              This website holds information about Candora Student Seminar. The project was done as a
+              final showcasing project to finalize a module.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Frontend</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="designs">
+        <h2 class="section-title">My designs</h2>
+        <div class="design-grid">
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="split">
+          <div>
+            <h2 class="section-title">
+              Crafting Seamless User Experiences with Design and Development
+            </h2>
+            <p>
+              As a full stack developer, I specialize in UI/UX design and development. My goal is to
+              create intuitive and engaging digital experiences.
+            </p>
+          </div>
+          <img src="https://i.imgur.com/duVtXnG.png" alt="Nati illustration" />
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h4>Design Skills</h4>
+            <p>Expert in responsive design, wireframing, and prototyping for diverse platforms.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Technical Expertise</h4>
+            <p>Proficient in modern web development frameworks with a focus on React and JavaScript.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Collaboration</h4>
+            <p>Comfortable working with cross-functional teams and iterating quickly.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Collaboration is the way we know about bla bla.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <strong>Email</strong>
+            <span>demelashnati@gmail.com</span>
+          </div>
+          <div class="contact-card">
+            <strong>Phone</strong>
+            <span>+32 476 969 188</span>
+          </div>
+          <div class="contact-card">
+            <strong>LinkedIn</strong>
+            <span>Natsrael Demelash</span>
+          </div>
+          <div class="contact-card">
+            <strong>Where I am based</strong>
+            <span>Leuven, Belgium</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2025 Nati Demelash • All rights reserved.</footer>
+  </body>
+</html>

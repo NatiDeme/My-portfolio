@@ -186,6 +186,37 @@
         gap: 1.2rem;
       }
 
+      .design-scroll-container {
+        overflow: hidden;
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+
+      .design-row {
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+      }
+
+      .design-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .design-track {
+        display: flex;
+        gap: 1.2rem;
+        width: fit-content;
+      }
+
+      .design-track .placeholder {
+        background: var(--card);
+        border-radius: 26px;
+        height: 300px;
+        width: 280px;
+        min-width: 280px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
       .placeholder {
         background: var(--card);
         border-radius: 26px;
@@ -332,6 +363,16 @@
           h2,p {
           width: 100%;
         }
+
+        .design-track .placeholder {
+          width: 240px;
+          min-width: 240px;
+          height: 250px;
+        }
+
+        .design-row {
+          margin-bottom: 1rem;
+        }
       }
 
       .contact-grid {
@@ -402,18 +443,47 @@
 
       <section id="designs">
         <h2 class="section-title">My designs</h2>
-        <div class="design-grid">
-          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" />
-          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 101223.png" />
-          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" />
-          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" />
-          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" />
-          <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="">
-          <img class="placeholder" src="./images/newversion/event.jpg" alt="">
-          <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="">
-          <img class="placeholder" src="./images/newversion/mine.jpg" alt="">
-          <img class="placeholder" src="./images/newversion/online.jpg" alt="">
-          <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="">
+        <div class="design-scroll-container">
+          <div class="design-row design-row-1">
+            <div class="design-track">
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" alt="Design 3" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" alt="Design 4" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" alt="Design 5" />
+              <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="Design 6" />
+              <img class="placeholder" src="./images/newversion/event.jpg" alt="Design 7" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+              <!-- Duplicate for seamless loop -->
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" alt="Design 3" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" alt="Design 4" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" alt="Design 5" />
+              <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="Design 6" />
+              <img class="placeholder" src="./images/newversion/event.jpg" alt="Design 7" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+            </div>
+          </div>
+          <div class="design-row design-row-2">
+            <div class="design-track">
+              <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="Design 8" />
+              <img class="placeholder" src="./images/newversion/mine.jpg" alt="Design 9" />
+              <img class="placeholder" src="./images/newversion/online.jpg" alt="Design 10" />
+              <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="Design 11" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+              <!-- Duplicate for seamless loop -->
+              <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="Design 8" />
+              <img class="placeholder" src="./images/newversion/mine.jpg" alt="Design 9" />
+              <img class="placeholder" src="./images/newversion/online.jpg" alt="Design 10" />
+              <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="Design 11" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -493,5 +563,38 @@
     <footer>© 2025 Nati Demelash • All rights reserved.</footer>
     <script src="projects.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      // Design gallery infinite scroll animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const row1 = document.querySelector('.design-row-1 .design-track');
+        const row2 = document.querySelector('.design-row-2 .design-track');
+        
+        if (row1 && row2) {
+          // Calculate the width of one set of images (half the total since we duplicated)
+          const row1Width = row1.scrollWidth / 2;
+          const row2Width = row2.scrollWidth / 2;
+          
+          // Set initial position for row 2 to start from the left
+          gsap.set(row2, { x: -row2Width });
+          
+          // Create GSAP animations
+          // Row 1 scrolls left (negative direction)
+          gsap.to(row1, {
+            x: -row1Width,
+            duration: 30,
+            ease: 'none',
+            repeat: -1
+          });
+          
+          // Row 2 scrolls right (positive direction - opposite of row 1)
+          gsap.to(row2, {
+            x: 0,
+            duration: 35,
+            ease: 'none',
+            repeat: -1
+          });
+        }
+      });
+    </script>
   </body>
 </html>

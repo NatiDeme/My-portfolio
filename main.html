@@ -111,7 +111,7 @@
       }
 
       .hero img {
-        width: min(380px, 100%);
+        /* width: min(380px, 100%); */
         justify-self: center;
       }
 
@@ -189,7 +189,7 @@
       .placeholder {
         background: var(--card);
         border-radius: 26px;
-        height: 160px;
+        height: 180px;
       }
 
       .split {
@@ -200,13 +200,20 @@
       }
 
       .skill-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: flex;
+        flex-direction: row;
         gap: 1.5rem;
-        margin-top: 1.5rem;
+        justify-content: space-between;
       }
 
-      .skill-card {
+      .skill-grid-content-item {
+        
+        p{
+          font-size: 14px;
+        }
+      }
+
+      /* .skill-card {
         padding: 1.5rem;
         border-radius: 20px;
         border: 1px solid var(--border);
@@ -216,7 +223,7 @@
       .skill-card h4 {
         margin-bottom: 0.75rem;
         font-size: 1.05rem;
-      }
+      } */
 
       .contact-grid {
         display: grid;
@@ -226,9 +233,13 @@
       }
 
       .contact-card {
-        border: 1px solid var(--border);
+        /* border: 1px solid var(--border); */
         border-radius: 18px;
         padding: 1.25rem;
+
+        img {
+          padding-bottom: 16px;
+        }
       }
 
       .contact-card strong {
@@ -249,6 +260,43 @@
         border-top: 1px solid var(--border);
         color: var(--muted);
         font-size: 0.9rem;
+      }
+      .about-me-head {
+        background-size: 400px;
+        padding-top: 10%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          width: 50%
+        }
+
+        p {
+          width: 40%
+        }
+      }
+      .skill-grid-content {
+        display: flex;
+        gap: 1.5rem;
+        width: 40%;
+      }
+
+      .tech-stack-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        width: 40%;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .contact-section {
+        padding-top: 10%;
       }
 
       @media (max-width: 700px) {
@@ -272,6 +320,14 @@
           text-align: center;
         }
 
+        .about-me-head {
+          flex-direction: column;
+
+          h2,p {
+          width: 100%;
+        }
+      }
+
         .skill-grid,
         .contact-grid {
           grid-template-columns: 1fr;
@@ -282,7 +338,7 @@
   <body>
     <header>
       <div class="page nav">
-        <div class="logo">N</div>
+        <img src="./images/newversion/NatiLogo.png" alt="Nati Logo" />
         <ul class="nav-links">
           <li><a href="#projects">Home</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -290,7 +346,7 @@
           <li><a href="#about">About</a></li>
         </ul>
         <button class="cta">
-          <span>▶</span>
+          <img src="./images/newversion/play.svg" alt="Play video" />
           Play video
         </button>
       </div>
@@ -317,41 +373,7 @@
           <span class="pill">Frontend</span>
           <span class="pill">Full-stack</span>
         </div>
-        <div class="cards">
-          <article class="card">
-            <h3>Name</h3>
-            <p>
-              This website holds information about Candora Student Seminar. The project was done as a
-              final showcasing project to finalize a module.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Frontend</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Name</h3>
-            <p>
-              This website holds information about Candora Student Seminar. The project was done as a
-              final showcasing project to finalize a module.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Frontend</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Name</h3>
-            <p>
-              This website holds information about Candora Student Seminar. The project was done as a
-              final showcasing project to finalize a module.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Frontend</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </article>
-        </div>
+        <div id="projects-containerid"></div>
       </section>
 
       <section id="designs">
@@ -370,7 +392,7 @@
 
       <section id="about">
         <div class="split">
-          <div>
+          <div class="about-me-head">
             <h2 class="section-title">
               Crafting Seamless User Experiences with Design and Development
             </h2>
@@ -379,42 +401,61 @@
               create intuitive and engaging digital experiences.
             </p>
           </div>
-          <img src="https://i.imgur.com/duVtXnG.png" alt="Nati illustration" />
         </div>
 
         <div class="skill-grid">
-          <div class="skill-card">
-            <h4>Design Skills</h4>
-            <p>Expert in responsive design, wireframing, and prototyping for diverse platforms.</p>
+          <div class="tech-stack-grid">
+            <img src="./images/newversion/techstack/typescript.svg" alt="TypeScript" />
+            <img src="./images/newversion/techstack/javascript.svg" alt="JavaScript" />
+            <img src="./images/newversion/techstack/react.svg" alt="React" />
+            <img src="./images/newversion/techstack/nodejs-horizontal.svg" alt="Node.js" />
+            <img src="./images/newversion/techstack/mongodb.svg" alt="Express" />
+            <img src="./images/newversion/techstack/tailwindcss.svg" alt="TailwindCSS" />
+            <img src="./images/newversion/techstack/figma.svg" alt="Figma" />
+            <img src="./images/newversion/techstack/mapbox.svg" alt="Git" />
+            <img src="./images/newversion/techstack/Amazon.svg" alt="Git" />
+            <img src="./images/newversion/techstack/docker.svg" alt="Docker" />
+            <img src="./images/newversion/techstack/Stylus-logo.svg" alt="AWS" />
+            <img src="./images/newversion/techstack/git.svg" alt="AWS" />
+            <img src="./images/newversion/techstack/github.svg" alt="AWS" />
           </div>
-          <div class="skill-card">
-            <h4>Technical Expertise</h4>
-            <p>Proficient in modern web development frameworks with a focus on React and JavaScript.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Collaboration</h4>
-            <p>Comfortable working with cross-functional teams and iterating quickly.</p>
+          <div class="skill-grid-content">
+            <div class="skill-grid-content-item">
+              <h3>Design Skills</h3>
+              <p>Expert in responsive design, wireframing, and prototyping for diverse platforms.</p>
+            </div>
+            <div class="skill-grid-content-item">
+              <h3>Technical Expertise</h3>
+              <p>Proficient in modern web development frameworks with a focus on React, Node.js, JavaScript and plenty of other technologies.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact">
+      <section class="contact-section" id="contact">
         <h2 class="section-title">Contact</h2>
-        <p>Collaboration is the way we know about bla bla.</p>
+        <div class="contact-content">
+          <h3>Collaboration is the way we know about bla bla.</h3>
+          <p>Don’t hesitate to reach out I am always one click away.</p>
+        </div>
         <div class="contact-grid">
           <div class="contact-card">
+            <img src="./images/newversion/envelope.svg" alt="Email" />
             <strong>Email</strong>
-            <span>demelashnati@gmail.com</span>
+            <span>demelashnatnael@gmail.com</span>
           </div>
           <div class="contact-card">
+            <img src="./images/newversion/phone.svg" alt="Phone" />
             <strong>Phone</strong>
             <span>+32 476 969 188</span>
           </div>
           <div class="contact-card">
+            <img src="./images/newversion/linkedin.svg" alt="LinkedIn" />
             <strong>LinkedIn</strong>
-            <span>Natsrael Demelash</span>
+            <span>Natnael Demelash</span>
           </div>
           <div class="contact-card">
+            <img src="./images/newversion/location-dot.svg" alt="Location" />
             <strong>Where I am based</strong>
             <span>Leuven, Belgium</span>
           </div>
@@ -423,5 +464,6 @@
     </main>
 
     <footer>© 2025 Nati Demelash • All rights reserved.</footer>
+    <script src="projects.js"></script>
   </body>
 </html>

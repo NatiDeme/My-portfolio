@@ -2,245 +2,609 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nati | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Natnael's portfolio Home page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --muted: #666666;
+        --border: #dadada;
+        --card: #f5f5f5;
+        --radius: 28px;
+        --container: min(1200px, 90vw);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        width: var(--container);
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.04); */
+        z-index: 10;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-weight: 500;
+      }
+
+      .cta {
+        padding: 0.6rem 1rem;
+        border-radius: 10px;
+        border: 1px solid var(--text);
+        background: var(--text);
+        color: white;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-weight: 400;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+        padding: 3.5rem 0 4rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.25rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 36ch;
+      }
+
+      .hero img {
+        /* width: min(380px, 100%); */
+        justify-self: center;
+      }
+
+      section + section {
+        margin-top: 4rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 1.5rem;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .pill {
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        padding: 0.6rem 1.4rem;
+        font-size: 0.92rem;
+        font-weight: 600;
+        background: white;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        min-height: 260px;
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        color: var(--muted);
+        flex: 1;
+      }
+
+      .tag-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .tag {
+        background: white;
+        border-radius: 999px;
+        padding: 0.4rem 1rem;
+        border: 1px solid var(--border);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .design-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.2rem;
+      }
+
+      .design-scroll-container {
+        overflow: hidden;
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+
+      .design-row {
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+      }
+
+      .design-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .design-track {
+        display: flex;
+        gap: 1.2rem;
+        width: fit-content;
+      }
+
+      .design-track .placeholder {
+        background: var(--card);
+        border-radius: 26px;
+        height: 300px;
+        width: 280px;
+        min-width: 280px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+
+      .placeholder {
+        background: var(--card);
+        border-radius: 26px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .skill-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: space-between;
+      }
+
+      .skill-grid-content-item {
+        
+        p{
+          font-size: 14px;
+        }
+      }
+
+      /* .skill-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .skill-card h4 {
+        margin-bottom: 0.75rem;
+        font-size: 1.05rem;
+      } */
+
+      .contact-grid {
+        display: flex;
+        width: 40%;
+        flex-wrap: wrap;
+        margin-left: auto;
+        gap: 1.5em;
+      }
+
+      .contact-content{
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+          width: 30%;
+        }
+      }
+
+      .contact-card {
+        /* border: 1px solid var(--border); */
+        border-radius: 18px;
+        padding: 1.25rem;
+        width: 200px;
+
+        img {
+          padding-bottom: 16px;
+        }
+      }
+
+      .contact-card strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-card span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .about-me-head {
+        background-size: 400px;
+        padding-top: 10%;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          width: 50%
+        }
+
+        p {
+          width: 40%
+        }
+      }
+      .skill-grid-content {
+        display: flex;
+        gap: 1.5rem;
+        width: 40%;
+      }
+
+      .tech-stack-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        width: 40%;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .contact-section {
+        padding-top: 10%;
+      }
+
+      @media (max-width: 700px) {
+        .nav-links {
+          display: none;
+        }
+
+        .cta {
+          padding-inline: 1rem;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .hero p {
+          margin: 0 auto;
+        }
+
+        .split {
+          text-align: center;
+        }
+
+        .about-me-head {
+          flex-direction: column;
+
+          h2,p {
+          width: 100%;
+        }
+
+        .design-track .placeholder {
+          width: 240px;
+          min-width: 240px;
+          height: 250px;
+        }
+
+        .design-row {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .contact-grid {
+        margin-left: 0;
+      }
+      .contact-content {
+        flex-direction: column;
+        gap: 1em;
+
+        h3 {
+          width: 100%;
+        }
+      }
+
+      .skill-grid, .skill-grid-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        width: 100%;
+      }
+
+      .tech-stack-grid{
+        width: 100%;
+      }
+
+        .skill-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="mob-nav-head">
-          <a href="#" id="mnha">Welcome</a>
-          <img src="images/more.png" alt="menu" id="menu" onclick="display()" />
-          <img
-            src="images/close.png"
-            alt="menu"
-            id="menu2"
-            onclick="display()"
-          />
-        </div>
-        <div class="mob-nav-container" id="mnc">
-          <ul class="mob-nav">
-            <li>
-              <a href="#personal-works" onclick="menuClicked()">Portfolio</a>
-            </li>
-            <li>
-              <a href="#about-me" onclick="menuClicked()">About</a>
-            </li>
-            <li>
-              <a href="#contact-me" onclick="menuClicked()">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page nav">
+        <img src="./images/newversion/NatiLogo.png" alt="Nati Logo" />
+        <ul class="nav-links">
+          <li><a href="#projects">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#designs">Design</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <button class="cta">
+          <img src="./images/newversion/play.svg" alt="Play video" />
+          Play video
+        </button>
+      </div>
     </header>
-    <main>
-      <section class="main-title">
-        <div class="top-guide">
-          <ul class="main-nav">
-            <li><a href="#personal-works">Portfolio</a></li>
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#contact-me">Contact</a></li>
-          </ul>
-        </div>
-        <div class="landing-text-container">
-          <h1 class="main-header">Hey there. I'm Nati</h1>
-          <h2 class="highligh-title">I'm a software developer</h2>
-          <p class="about-me">
-            I can help you build a product , feature or website Look through
-            some of my work and experience! If you like what you see and have a
-            project you need coded, don’t hesitate to contact me.
-          </p>
-        </div>
 
-        <ul class="main-icons">
-          <li>
-            <a href="https://twitter.com/NatiDemelash"
-              ><img class="icons" src="images/twitter.png" alt="twitter link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/natnael-demelash/"
-              ><img class="icons" src="images/Linkedin.png" alt="Linkedin link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://angel.co/u/natnael-demelash"
-              ><img class="icons" src="images/Vector.png" alt="Angel link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com/NatiDeme"
-              ><img class="icons" src="images/github.png" alt="Github link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://medium.com/@demelashnatnael"
-              ><img class="icons" src="images/Vectorm.png" alt="Medium link"
-            /></a>
-          </li>
-        </ul>
-        <a href="#personal-works" id="arrow-icon"
-          ><img src="images/Disabled.png" alt="scroll down"
-        /></a>
-      </section>
-
-      <section class="personal-works" id="personal-works">
-        <div class="my-work-title">
-          <h2>My Recent Works</h2>
-          <img src="images/Indicator.png" alt="" />
-        </div>
-        <div id="projects-containerid">
-        </div>
-      </section>
-
-      <section class="about-me-detail" id="about-me">
-        <div class="about-me-head">
-          <h2>About me</h2>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p>Hey there, I'm Nati</p>
+          <h1>I'm a software developer</h1>
           <p>
-            I can help you build a product, feature or website Look through some
-            of my work and experience! If you like what you see and have a
-            project you need coded, don’t hesitate to contact me.
+            I can help you build a product, feature, or website. Look through some of my work and
+            experience. If you like what you see and have a project you need coded, don’t hesitate to
+            contact me.
           </p>
-          <button class="aboutme-button" type="button">Get My Resume</button>
         </div>
-        <ul class="category-container">
-          <li class="category-card">
-            <div class="single-card-2">
-              <img src="images/Ellipse-lang.png" alt="" />
-              <h3>Language</h3>
-              <ul class="skills-list-2">
-                <li>JavaScript</li>
-                <li>Ruby</li>
-                <li>html</li>
-                <li>css</li>
-              </ul>
-            </div>
-          </li>
-          <li class="category-card">
-            <div class="single-card-2">
-              <img src="images/Ellipse-frame.png" alt="" />
-              <h3>Frameworks</h3>
-              <ul class="skills-list-2">
-                <li>Bootstrap</li>
-                <li>Ruby on rails</li>
-                <li>RSpec</li>
-                <li>Capybara</li>
-                <li>Selenium</li>
-              </ul>
-            </div>
-          </li>
-          <li class="category-card">
-            <div class="single-card-2">
-              <img src="images/Ellipse-skill.png" alt="" />
-              <h3>Skills</h3>
-              <ul class="skills-list-2">
-                <li>Codekit</li>
-                <li>GitHub</li>
-                <li>Codepen</li>
-                <li>Gitlab</li>
-                <li>Terminal</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        <img src="./images/newversion/NatiAvatar.png" alt="3D character illustration" />
       </section>
 
-      <section class="card-modal disable-scrollbars" id="modal">
-        <div class="modal-wrapper" id="modal-wrap">
+      <section id="projects">
+        <h2 class="section-title">My recent projects</h2>
+        <div class="pill-row">
+          <span class="pill">UI/UX</span>
+          <span class="pill">Frontend</span>
+          <span class="pill">Full-stack</span>
+        </div>
+        <div id="projects-containerid"></div>
+      </section>
+
+      <section id="designs">
+        <h2 class="section-title">My designs</h2>
+        <div class="design-scroll-container">
+          <div class="design-row design-row-1">
+            <div class="design-track">
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" alt="Design 3" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" alt="Design 4" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" alt="Design 5" />
+              <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="Design 6" />
+              <img class="placeholder" src="./images/newversion/event.jpg" alt="Design 7" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+              <!-- Duplicate for seamless loop -->
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" alt="Design 3" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" alt="Design 4" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" alt="Design 5" />
+              <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="Design 6" />
+              <img class="placeholder" src="./images/newversion/event.jpg" alt="Design 7" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+            </div>
+          </div>
+          <div class="design-row design-row-2">
+            <div class="design-track">
+              <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="Design 8" />
+              <img class="placeholder" src="./images/newversion/mine.jpg" alt="Design 9" />
+              <img class="placeholder" src="./images/newversion/online.jpg" alt="Design 10" />
+              <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="Design 11" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+              <!-- Duplicate for seamless loop -->
+              <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="Design 8" />
+              <img class="placeholder" src="./images/newversion/mine.jpg" alt="Design 9" />
+              <img class="placeholder" src="./images/newversion/online.jpg" alt="Design 10" />
+              <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="Design 11" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" alt="Design 1" />
+              <img class="placeholder" src="./images/newversion/onepagebuildspace.png" alt="Design 2" />
+              <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 at 02.45.19.png" alt="Design 7" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="split">
+          <div class="about-me-head">
+            <h2 class="section-title">
+              Crafting Seamless User Experiences with Design and Development
+            </h2>
+            <p>
+              As a full stack developer, I specialize in UI/UX design and development. My goal is to
+              create intuitive and engaging digital experiences.
+            </p>
+          </div>
+        </div>
+
+        <div class="skill-grid">
+          <div class="tech-stack-grid">
+            <img src="./images/newversion/techstack/typescript.svg" alt="TypeScript" />
+            <img src="./images/newversion/techstack/javascript.svg" alt="JavaScript" />
+            <img src="./images/newversion/techstack/react.svg" alt="React" />
+            <img src="./images/newversion/techstack/nodejs-horizontal.svg" alt="Node.js" />
+            <img src="./images/newversion/techstack/mongodb.svg" alt="Express" />
+            <img src="./images/newversion/techstack/tailwindcss.svg" alt="TailwindCSS" />
+            <img src="./images/newversion/techstack/figma.svg" alt="Figma" />
+            <img src="./images/newversion/techstack/mapbox.svg" alt="Git" />
+            <img src="./images/newversion/techstack/Amazon.svg" alt="Git" />
+            <img src="./images/newversion/techstack/docker.svg" alt="Docker" />
+            <img src="./images/newversion/techstack/Stylus-logo.svg" alt="AWS" />
+            <img src="./images/newversion/techstack/git.svg" alt="AWS" />
+            <img src="./images/newversion/techstack/github.svg" alt="AWS" />
+          </div>
+          <div class="skill-grid-content">
+            <div class="skill-grid-content-item">
+              <h3>Design Skills</h3>
+              <p>Expert in responsive design, wireframing, and prototyping for diverse platforms.</p>
+            </div>
+            <div class="skill-grid-content-item">
+              <h3>Technical Expertise</h3>
+              <p>Proficient in modern web development frameworks with a focus on React, Node.js, JavaScript and plenty of other technologies.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+          <h3>Collaboration is the way we bring great ideas to life. Get in touch let’s build something great.</h3>
+          <p>Don’t hesitate to reach out I am always one click away.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <img src="./images/newversion/envelope.svg" alt="Email" />
+            <strong>Email</strong>
+            <span>demelashnatnael@gmail.com</span>
+          </div>
+          <div class="contact-card">
+            <img src="./images/newversion/phone.svg" alt="Phone" />
+            <strong>Phone</strong>
+            <span>+32 476 969 188</span>
+          </div>
+          <div class="contact-card">
+            <img src="./images/newversion/linkedin.svg" alt="LinkedIn" />
+            <strong>LinkedIn</strong>
+            <span>Natnael Demelash</span>
+          </div>
+          <div class="contact-card">
+            <img src="./images/newversion/location-dot.svg" alt="Location" />
+            <strong>Where I am based</strong>
+            <span>Leuven, Belgium</span>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
-      <form
-    
-        method="post"
-        id="contact-me"
-        action="https://formspree.io/f/xayvlegd"
-      >
-        <div class="contactme-head">
-          <h3>
-            I'm always interested in hearing about new projects, so if you'd
-            like to chat please get in touch.
-          </h3>
-        </div>
-        <ul class="form-container">
-          <li class="name-fields">
-            <input
-              type="text"
-              name="Full name"
-              id="user_name"
-              placeholder="Full name"
-              maxlength="30"
-              required
-            />
-          </li>
-          <li>
-            <input
-              type="email"
-              name="email"
-              id="user_email"
-              placeholder="Email address"
-              required
-            />
-          </li>
-          <li>
-            <textarea
-              name="message"
-              id="user_text"
-              cols="30"
-              rows="10"
-              maxlength="500"
-              placeholder="Enter text here"
-              required
-            ></textarea>
-          </li>
-          <li class="submit-button-container">
-            <button class="submit-contact" type="submit" id="submit">
-              Get in touch
-            </button>
-          </li>
-          <li class="error-message">
-            <small id="error"></small>
-          </li>
-        </ul>
-      </form>
-      <div class="bottom-line">
-        <hr />
-        <ul class="footer-icons">
-          <li>
-            <a href="https://twitter.com/NatiDemelash"
-              ><img class="icons" src="images/twitter.png" alt="twitter link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/natnael-demelash/"
-              ><img class="icons" src="images/Linkedin.png" alt="Linkedin link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://angel.co/u/natnael-demelash"
-              ><img class="icons" src="images/Vector.png" alt="Angel link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com/NatiDeme"
-              ><img class="icons" src="images/github.png" alt="Github link"
-            /></a>
-          </li>
-          <li>
-            <a href="https://medium.com/@demelashnatnael"
-              ><img class="icons" src="images/Vectorm.png" alt="Medium link"
-            /></a>
-          </li>
-        </ul>
-        <div class="email-container">
-          <span>demelashnatnael@gmail.com</span>
-        </div>
-      </div>
-    </footer>
-    <script src="main.js"></script>
+
+    <footer>© 2025 Nati Demelash • All rights reserved.</footer>
+    <script src="projects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      // Design gallery infinite scroll animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const row1 = document.querySelector('.design-row-1 .design-track');
+        const row2 = document.querySelector('.design-row-2 .design-track');
+        
+        if (row1 && row2) {
+          // Calculate the width of one set of images (half the total since we duplicated)
+          const row1Width = row1.scrollWidth / 2;
+          const row2Width = row2.scrollWidth / 2;
+          
+          // Set initial position for row 2 to start from the left
+          gsap.set(row2, { x: -row2Width });
+          
+          // Create GSAP animations
+          // Row 1 scrolls left (negative direction)
+          gsap.to(row1, {
+            x: -row1Width,
+            duration: 30,
+            ease: 'none',
+            repeat: -1
+          });
+          
+          // Row 2 scrolls right (positive direction - opposite of row 1)
+          gsap.to(row2, {
+            x: 0,
+            duration: 35,
+            ease: 'none',
+            repeat: -1
+          });
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Natnael's portfolio Home page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="mob-nav-head">
+          <a href="#" id="mnha">Welcome</a>
+          <img src="images/more.png" alt="menu" id="menu" onclick="display()" />
+          <img
+            src="images/close.png"
+            alt="menu"
+            id="menu2"
+            onclick="display()"
+          />
+        </div>
+        <div class="mob-nav-container" id="mnc">
+          <ul class="mob-nav">
+            <li>
+              <a href="#personal-works" onclick="menuClicked()">Portfolio</a>
+            </li>
+            <li>
+              <a href="#about-me" onclick="menuClicked()">About</a>
+            </li>
+            <li>
+              <a href="#contact-me" onclick="menuClicked()">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="main-title">
+        <div class="top-guide">
+          <ul class="main-nav">
+            <li><a href="#personal-works">Portfolio</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#contact-me">Contact</a></li>
+          </ul>
+        </div>
+        <div class="landing-text-container">
+          <h1 class="main-header">Hey there. I'm Nati</h1>
+          <h2 class="highligh-title">I'm a software developer</h2>
+          <p class="about-me">
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hesitate to contact me.
+          </p>
+        </div>
+
+        <ul class="main-icons">
+          <li>
+            <a href="https://twitter.com/NatiDemelash"
+              ><img class="icons" src="images/twitter.png" alt="twitter link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/natnael-demelash/"
+              ><img class="icons" src="images/Linkedin.png" alt="Linkedin link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://angel.co/u/natnael-demelash"
+              ><img class="icons" src="images/Vector.png" alt="Angel link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/NatiDeme"
+              ><img class="icons" src="images/github.png" alt="Github link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://medium.com/@demelashnatnael"
+              ><img class="icons" src="images/Vectorm.png" alt="Medium link"
+            /></a>
+          </li>
+        </ul>
+        <a href="#personal-works" id="arrow-icon"
+          ><img src="images/Disabled.png" alt="scroll down"
+        /></a>
+      </section>
+
+      <section class="personal-works" id="personal-works">
+        <div class="my-work-title">
+          <h2>My Recent Works</h2>
+          <img src="images/Indicator.png" alt="" />
+        </div>
+        <div id="projects-containerid">
+        </div>
+      </section>
+
+      <section class="about-me-detail" id="about-me">
+        <div class="about-me-head">
+          <h2>About me</h2>
+          <p>
+            I can help you build a product, feature or website Look through some
+            of my work and experience! If you like what you see and have a
+            project you need coded, don’t hesitate to contact me.
+          </p>
+          <button class="aboutme-button" type="button">Get My Resume</button>
+        </div>
+        <ul class="category-container">
+          <li class="category-card">
+            <div class="single-card-2">
+              <img src="images/Ellipse-lang.png" alt="" />
+              <h3>Language</h3>
+              <ul class="skills-list-2">
+                <li>JavaScript</li>
+                <li>Ruby</li>
+                <li>html</li>
+                <li>css</li>
+              </ul>
+            </div>
+          </li>
+          <li class="category-card">
+            <div class="single-card-2">
+              <img src="images/Ellipse-frame.png" alt="" />
+              <h3>Frameworks</h3>
+              <ul class="skills-list-2">
+                <li>Bootstrap</li>
+                <li>Ruby on rails</li>
+                <li>RSpec</li>
+                <li>Capybara</li>
+                <li>Selenium</li>
+              </ul>
+            </div>
+          </li>
+          <li class="category-card">
+            <div class="single-card-2">
+              <img src="images/Ellipse-skill.png" alt="" />
+              <h3>Skills</h3>
+              <ul class="skills-list-2">
+                <li>Codekit</li>
+                <li>GitHub</li>
+                <li>Codepen</li>
+                <li>Gitlab</li>
+                <li>Terminal</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card-modal disable-scrollbars" id="modal">
+        <div class="modal-wrapper" id="modal-wrap">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <form
+    
+        method="post"
+        id="contact-me"
+        action="https://formspree.io/f/xayvlegd"
+      >
+        <div class="contactme-head">
+          <h3>
+            I'm always interested in hearing about new projects, so if you'd
+            like to chat please get in touch.
+          </h3>
+        </div>
+        <ul class="form-container">
+          <li class="name-fields">
+            <input
+              type="text"
+              name="Full name"
+              id="user_name"
+              placeholder="Full name"
+              maxlength="30"
+              required
+            />
+          </li>
+          <li>
+            <input
+              type="email"
+              name="email"
+              id="user_email"
+              placeholder="Email address"
+              required
+            />
+          </li>
+          <li>
+            <textarea
+              name="message"
+              id="user_text"
+              cols="30"
+              rows="10"
+              maxlength="500"
+              placeholder="Enter text here"
+              required
+            ></textarea>
+          </li>
+          <li class="submit-button-container">
+            <button class="submit-contact" type="submit" id="submit">
+              Get in touch
+            </button>
+          </li>
+          <li class="error-message">
+            <small id="error"></small>
+          </li>
+        </ul>
+      </form>
+      <div class="bottom-line">
+        <hr />
+        <ul class="footer-icons">
+          <li>
+            <a href="https://twitter.com/NatiDemelash"
+              ><img class="icons" src="images/twitter.png" alt="twitter link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/natnael-demelash/"
+              ><img class="icons" src="images/Linkedin.png" alt="Linkedin link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://angel.co/u/natnael-demelash"
+              ><img class="icons" src="images/Vector.png" alt="Angel link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/NatiDeme"
+              ><img class="icons" src="images/github.png" alt="Github link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://medium.com/@demelashnatnael"
+              ><img class="icons" src="images/Vectorm.png" alt="Medium link"
+            /></a>
+          </li>
+        </ul>
+        <div class="email-container">
+          <span>demelashnatnael@gmail.com</span>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

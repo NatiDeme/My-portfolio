@@ -182,14 +182,15 @@
 
       .design-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.2rem;
       }
 
       .placeholder {
         background: var(--card);
         border-radius: 26px;
-        height: 180px;
+        height: 300px;
+        object-fit: cover;
       }
 
       .split {
@@ -226,10 +227,15 @@
       } */
 
       .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
+        display: flex;
+        width: 40%;
+        flex-wrap: wrap;
+        margin-left: auto;
+      }
+
+      .contact-content{
+        display: flex;
+        justify-content: space-between;
       }
 
       .contact-card {
@@ -328,6 +334,24 @@
         }
       }
 
+      .contact-grid {
+        margin-left: 0;
+      }
+      .contact-content {
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      .skill-grid, .skill-grid-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        width: 100%;
+      }
+
+      .tech-stack-grid{
+        width: 100%;
+      }
+
         .skill-grid,
         .contact-grid {
           grid-template-columns: 1fr;
@@ -379,14 +403,17 @@
       <section id="designs">
         <h2 class="section-title">My designs</h2>
         <div class="design-grid">
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
-          <div class="placeholder"></div>
+          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 100349.png" />
+          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-21 101223.png" />
+          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024108.png" />
+          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 025007.png" />
+          <img class="placeholder" src="./images/newversion/Screenshot 2025-11-25 024924.png" />
+          <img class="placeholder" src="./images/newversion/dereja vf.jpg" alt="">
+          <img class="placeholder" src="./images/newversion/event.jpg" alt="">
+          <img class="placeholder" src="./images/newversion/gena v6.jpg" alt="">
+          <img class="placeholder" src="./images/newversion/mine.jpg" alt="">
+          <img class="placeholder" src="./images/newversion/online.jpg" alt="">
+          <img class="placeholder" src="./images/newversion/SkillUp Hawassa.jpg" alt="">
         </div>
       </section>
 
@@ -465,5 +492,6 @@
 
     <footer>© 2025 Nati Demelash • All rights reserved.</footer>
     <script src="projects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </body>
 </html>
